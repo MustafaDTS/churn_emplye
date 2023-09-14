@@ -67,9 +67,9 @@ if predict:
     st.write("Based on our model your prediction is:")
     
     if int(result[0]) == 0:
-        st.success(result[0])
+        st.success(result[0], icon="✅")
         st.write("Happy working! Your staff is staying here.")
     else:
-        st.success(result[0])
+        st.error(result[0], icon="🚨")
         st.write("Find someone new! Your staff is goinf. ")
     
