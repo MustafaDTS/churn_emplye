@@ -15,12 +15,12 @@ de_05_chur_model = pickle.load(open("catboost_model", "rb"))
 
 department= st.selectbox("Select your work department", ('sales','technical','support','IT','RandD','product_mng','marketing','accounting','hr','management'))
 salary = st.selectbox("Select your salary level", ('low', 'medium', 'high'))
-satisfaction_level = st.sidebar.selectbox("What is your satisfaction level:", (0, 0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1))
+work_accident = st.sidebar.selectbox("What is your work accident:",(0,1))
+satisfaction_level = st.sidebar.slider("What is your satisfaction level:", min_value=0, max_value=1, value=0.5, step=0.01)
 last_evaluation = st.sidebar.slider("What is your last evaluation:", min_value=0, max_value=1, value=10, step=1)
 number_project = st.sidebar.selectbox("What is your number of project:", (2,3,4,5,6,7))
 average_montly_hours = st.sidebar.slider("What is your average montly hours?", min_value=96, max_value=310, value=150,step=7)
 time_spend_company = st.sidebar.slider("What is your time spend company:", min_value=2, max_value=10, value=5,step= 1)
-work_accident = st.sidebar.selectbox("What is your work accident:",(0,1))
 promotion_last_5years = st.sidebar.selectbox("What is your promotion last in the 5 years:",(0,1))
 
 
@@ -71,5 +71,5 @@ if predict:
         st.write("Happy working! Your staff is staying here.")
     else:
         st.error(result[0], icon="🚨")
-        st.write("Find someone new! Your staff is goinf. ")
+        st.write("Find someone new! Your staff is going.")
     
