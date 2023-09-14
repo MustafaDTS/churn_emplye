@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 st.title("Welcome to our free employer behaviour prediction site")
-st.text("Please ask your eployee following questions. Depending of their answer our model will predic \n whether they stay or leave.\n You can use left-sidebar to specify extra specifications. ")
+st.text("Please ask your eployee following questions. Depending of their answer our model  \nwill predic whether they stay or leave. You can use left-sidebar to specify extra specifications. ")
 
 # To load machine learning model
 import pickle
