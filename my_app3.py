@@ -65,8 +65,7 @@ predict = st.button("Predict")
 result = de_05_chur_model.predict(df_scal)
 if predict:
     st.write("Based on our model your prediction is:")
-    st.success(result[0])
-    if st.success(result[0]) == 0:
+    if st.success(result[0]) == "0":
         st.write("Happy working! Your staff is staying here.")
     else:
         st.write("Find someone new! Your staff is goinf. ")
